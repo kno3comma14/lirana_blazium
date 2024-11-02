@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityResource" load_steps=2 format=3 uid="uid://c8qx6sr3isspy"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_pnb84"]
+
+[resource]
+script = ExtResource("1_pnb84")
+name = "Hekate Totem Healing"
+description = "Recover 12 hp to the caster every 7 seconds"
+hp_effect_intensity = 12
+energy_effect_intensity = 0
+hp_comsuption = 0
+energy_comsuption = 0
+cooldown = 0
+duration = 0
+tick_period = 7
+type = 1

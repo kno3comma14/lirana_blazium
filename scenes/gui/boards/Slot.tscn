@@ -12,13 +12,14 @@ grow_vertical = 2
 script = ExtResource("1_vpcwa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4, 0.952941, 0.564706, 0.807843)
+color = Color(0.4, 0.952941, 0.564706, 0.352941)
 
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]
