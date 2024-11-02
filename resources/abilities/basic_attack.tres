@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityResource" load_steps=2 format=3 uid="uid://cuafhwrnvo7w0"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_gbslu"]
+
+[resource]
+script = ExtResource("1_gbslu")
+name = "Basic Attack"
+description = "Basic attack"
+effect_intensity = 2
+cooldown = 1

@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvidwnis5pprw"]
+
+[ext_resource type="Texture2D" uid="uid://ccaemkqf0iq6y" path="res://assets/sprites/portraits/lirana.png" id="1_6mpg5"]
+[ext_resource type="FontFile" uid="uid://s8qqrnjiga8b" path="res://assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf" id="2_2qi0l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8d1p"]
+atlas = ExtResource("1_6mpg5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b84t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q747y"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 0.334863, 0.341921, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c53ij"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k3nl"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.52338, 0.00363772, 0.971231, 1)
+
+[node name="LiranaInfo" type="Control"]
+layout_mode = 3
+anchor_right = 0.201
+anchor_bottom = 0.149
+offset_right = -385.92
+offset_bottom = -160.92
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 138.0
+offset_bottom = 123.0
+texture = SubResource("AtlasTexture_u8d1p")
+
+[node name="HealthInfo" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 46.0
+offset_right = 354.0
+offset_bottom = 86.0
+
+[node name="Label" type="Label" parent="HealthInfo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qi0l")
+theme_override_font_sizes/font_size = 20
+text = "      HP
+"
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthInfo"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_3b84t")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q747y")
+value = 100.0
+
+[node name="EnergyInfo" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 79.0
+offset_right = 353.0
+offset_bottom = 119.0
+
+[node name="Label" type="Label" parent="EnergyInfo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qi0l")
+theme_override_font_sizes/font_size = 20
+text = " Energy  
+"
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="EnergyInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_c53ij")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4k3nl")
+value = 100.0

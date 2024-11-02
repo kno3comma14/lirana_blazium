@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpgrbmmsmed43"]
+
+[ext_resource type="PackedScene" uid="uid://dvidwnis5pprw" path="res://scenes/gui/LiranaInfo.tscn" id="1_118jn"]
+[ext_resource type="Texture2D" uid="uid://1cawp2rq6jkx" path="res://assets/sprites/backgrounds/board0001.png" id="1_ufeoh"]
+[ext_resource type="PackedScene" uid="uid://bhc5421osu2xp" path="res://scenes/gui/boards/Board.tscn" id="2_7m2hd"]
+[ext_resource type="PackedScene" uid="uid://bfybefs4048f2" path="res://scenes/gui/AbilityPanel.tscn" id="3_en2je"]
+[ext_resource type="PackedScene" uid="uid://dawevfr5yeg86" path="res://scenes/characters/LiranaBattler.tscn" id="3_smlgs"]
+[ext_resource type="PackedScene" uid="uid://bcttf33jblp1u" path="res://scenes/characters/KnightBattler.tscn" id="6_3xv2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i08vk"]
+size = Vector2(91, 850)
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LiranaInfo" parent="CanvasLayer" instance=ExtResource("1_118jn")]
+scale = Vector2(1.3, 1.3)
+
+[node name="Board" parent="CanvasLayer" instance=ExtResource("2_7m2hd")]
+offset_left = -34.0
+offset_top = 122.0
+offset_right = -178.0
+offset_bottom = -152.0
+size_flags_vertical = 4
+
+[node name="AbilityPanel" parent="CanvasLayer" instance=ExtResource("3_en2je")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -340.0
+offset_right = 50.0
+offset_bottom = -340.0
+grow_horizontal = 1
+scale = Vector2(2.2, 2.2)
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(965.5, 541)
+scale = Vector2(7.69141, 5.80208)
+texture = ExtResource("1_ufeoh")
+
+[node name="LiranaBattler" parent="." instance=ExtResource("3_smlgs")]
+position = Vector2(673, 381)
+
+[node name="KnightBattler" parent="." instance=ExtResource("6_3xv2u")]
+position = Vector2(1795, 192)
+scale = Vector2(6, 6)
+
+[node name="Barrier" type="StaticBody2D" parent="."]
+position = Vector2(604, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier"]
+position = Vector2(35.5, 401)
+shape = SubResource("RectangleShape2D_i08vk")

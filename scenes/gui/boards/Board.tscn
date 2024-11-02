@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhc5421osu2xp"]
+
+[ext_resource type="PackedScene" uid="uid://bid17c0itp73q" path="res://scenes/gui/boards/Slot.tscn" id="1_5sgne"]
+
+[node name="Board" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 694.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 5
+
+[node name="Slot13" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot2" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot3" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot4" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot5" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot6" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot7" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot8" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot9" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot10" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot11" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot12" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot14" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot15" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot16" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot17" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot18" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot19" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2
+
+[node name="Slot20" parent="GridContainer" instance=ExtResource("1_5sgne")]
+layout_mode = 2

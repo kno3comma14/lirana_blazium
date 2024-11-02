@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dawevfr5yeg86"]
+
+[ext_resource type="Script" path="res://src/characters/lirana_battler.gd" id="1_khul0"]
+[ext_resource type="Texture2D" uid="uid://ck20b8hsx46s7" path="res://assets/sprites/characters/lirana_battler.png" id="1_lmc6d"]
+
+[sub_resource type="Animation" id="Animation_v53xx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_raj63"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_esqe5"]
+_data = {
+"RESET": SubResource("Animation_v53xx"),
+"idle": SubResource("Animation_raj63")
+}
+
+[node name="LiranaBattler" type="Node2D"]
+script = ExtResource("1_khul0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_lmc6d")
+hframes = 43
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_esqe5")
+}

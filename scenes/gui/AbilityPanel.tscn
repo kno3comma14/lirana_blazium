@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfybefs4048f2"]
+
+[ext_resource type="Texture2D" uid="uid://c5bbkahd3pb55" path="res://assets/sprites/gui/buttons/blood_pact.png" id="1_kqk4u"]
+[ext_resource type="Texture2D" uid="uid://c1s0op2ank820" path="res://assets/sprites/gui/buttons/hekate_tribute.png" id="2_c74ko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7aj66"]
+bg_color = Color(0, 0.0470588, 0.172549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prkua"]
+atlas = ExtResource("1_kqk4u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5m24"]
+atlas = ExtResource("1_kqk4u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v02po"]
+atlas = ExtResource("2_c74ko")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yoyv"]
+atlas = ExtResource("2_c74ko")
+region = Rect2(32, 0, 32, 32)
+
+[node name="AbilityPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 151.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7aj66")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 151.0
+offset_bottom = 96.0
+columns = 4
+
+[node name="BloodPactButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_prkua")
+texture_disabled = SubResource("AtlasTexture_g5m24")
+
+[node name="HekateTributeButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v02po")
+texture_disabled = SubResource("AtlasTexture_0yoyv")
+
+[node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureButton8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2

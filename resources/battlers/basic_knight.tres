@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BattlerResource" load_steps=4 format=3 uid="uid://5510sou3p5cq"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_fyb8v"]
+[ext_resource type="Resource" uid="uid://cuafhwrnvo7w0" path="res://resources/abilities/basic_attack.tres" id="2_d8qem"]
+[ext_resource type="Script" path="res://src/combat/battler_resource.gd" id="3_xly2i"]
+
+[resource]
+script = ExtResource("3_xly2i")
+name = "Knight"
+max_hp = 100
+max_energy = 0
+strength = 10
+is_enemy = true
+ability_list = Array[ExtResource("1_fyb8v")]([ExtResource("2_d8qem")])
