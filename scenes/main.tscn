@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpgrbmmsmed43"]
+[gd_scene load_steps=9 format=3 uid="uid://cpgrbmmsmed43"]
 
 [ext_resource type="PackedScene" uid="uid://dvidwnis5pprw" path="res://scenes/gui/LiranaInfo.tscn" id="1_118jn"]
 [ext_resource type="Texture2D" uid="uid://1cawp2rq6jkx" path="res://assets/sprites/backgrounds/board0001.png" id="1_ufeoh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfybefs4048f2" path="res://scenes/gui/AbilityPanel.tscn" id="3_en2je"]
 [ext_resource type="PackedScene" uid="uid://dawevfr5yeg86" path="res://scenes/characters/LiranaBattler.tscn" id="3_smlgs"]
 [ext_resource type="PackedScene" uid="uid://bcttf33jblp1u" path="res://scenes/characters/KnightBattler.tscn" id="6_3xv2u"]
+[ext_resource type="PackedScene" uid="uid://b7a63cftxcfo2" path="res://scenes/characters/Zombie.tscn" id="7_ngsi3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i08vk"]
 size = Vector2(91, 850)
@@ -51,6 +52,9 @@ scale = Vector2(1, 1)
 z_index = 2
 position = Vector2(1795, 192)
 scale = Vector2(6, 6)
+
+[node name="Zombie" parent="." instance=ExtResource("7_ngsi3")]
+scale = Vector2(4, 4)
 
 [node name="Barrier" type="StaticBody2D" parent="."]
 position = Vector2(604, 128)
