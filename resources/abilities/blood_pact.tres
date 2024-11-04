@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityResource" load_steps=2 format=3 uid="uid://ohpqh5cws5r"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_b7ads"]
+
+[resource]
+script = ExtResource("1_b7ads")
+name = "Blood Pact"
+description = "Consumes 45 HP to return 60 energy to the caster."
+hp_effect_intensity = 0
+energy_effect_intensity = 60
+hp_comsuption = 45
+energy_comsuption = 0
+cooldown = 0
+duration = 0
+tick_period = 0
+type = 2

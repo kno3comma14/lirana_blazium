@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 func _on_color_rect_mouse_entered() -> void:
 	central_coordinates = color_rect.global_position + color_rect.size / 2
 	print(central_coordinates)
-	color_rect.color.a = 1
+	color_rect.color.a = 0.5
 
 
 func _on_color_rect_mouse_exited() -> void:

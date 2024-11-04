@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7a63cftxcfo2"]
+
+[ext_resource type="Texture2D" uid="uid://hyr4swnpbwmd" path="res://assets/sprites/characters/zombie01.png" id="1_adjae"]
+[ext_resource type="Script" path="res://src/characters/zombie.gd" id="1_s4x3u"]
+
+[sub_resource type="Animation" id="Animation_7qmdh"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_tpgnr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_qumj4"]
+resource_name = "Attack"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 8, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1gw4"]
+_data = {
+"Attack": SubResource("Animation_qumj4"),
+"RESET": SubResource("Animation_tpgnr"),
+"Walk": SubResource("Animation_7qmdh")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wovsf"]
+size = Vector2(20, 24)
+
+[node name="Zombie" type="CharacterBody2D"]
+script = ExtResource("1_s4x3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_adjae")
+hframes = 9
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o1gw4")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_wovsf")

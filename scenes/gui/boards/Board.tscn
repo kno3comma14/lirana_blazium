@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhc5421osu2xp"]
+[gd_scene load_steps=3 format=3 uid="uid://bhc5421osu2xp"]
 
 [ext_resource type="PackedScene" uid="uid://bid17c0itp73q" path="res://scenes/gui/boards/Slot.tscn" id="1_5sgne"]
+[ext_resource type="Script" path="res://src/gui/board.gd" id="1_jbaiy"]
 
 [node name="Board" type="Control"]
 layout_mode = 3
@@ -9,8 +10,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jbaiy")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

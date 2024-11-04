@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityResource" load_steps=2 format=3 uid="uid://cnkc0o2j2hf8f"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_ncfta"]
+
+[resource]
+script = ExtResource("1_ncfta")
+name = "Hekate Tribute"
+description = "Cast a totem which heals the caster while it remains alive."
+hp_effect_intensity = 0
+energy_effect_intensity = 0
+hp_comsuption = 0
+energy_comsuption = 100
+cooldown = 25
+duration = 90
+tick_period = 0
+type = 2

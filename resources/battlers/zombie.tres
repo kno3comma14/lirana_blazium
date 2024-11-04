@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BattlerResource" load_steps=4 format=3 uid="uid://bhh80a3y1p0mu"]
+
+[ext_resource type="Script" path="res://src/combat/ability_resource.gd" id="1_ej2g2"]
+[ext_resource type="Script" path="res://src/combat/battler_resource.gd" id="2_qn8kp"]
+[ext_resource type="Resource" uid="uid://cuafhwrnvo7w0" path="res://resources/abilities/basic_attack.tres" id="2_u7kpj"]
+
+[resource]
+script = ExtResource("2_qn8kp")
+name = "Zombie Soldier"
+max_hp = 120
+max_energy = 0
+hp = 120
+energy = null
+strength = 5
+agility = 5
+is_enemy = false
+ability_list = Array[ExtResource("1_ej2g2")]([ExtResource("2_u7kpj")])
